@@ -10,8 +10,8 @@
 .life-canvas{position:absolute;inset:15px;width:calc(100% - 30px);height:calc(100% - 30px);z-index:0;opacity:.58}.art-word{z-index:1}.manifesto-life{position:relative;inset:auto;width:clamp(210px,27vw,370px);height:clamp(210px,27vw,370px);justify-self:center;opacity:.6}.card-art .life-canvas{mix-blend-mode:multiply}.art-blue .life-canvas{mix-blend-mode:screen;opacity:.55}.art-cobalt .life-canvas{mix-blend-mode:screen;opacity:.65}
 @media(max-width:700px){.manifesto-life{width:180px;height:180px;margin:65px auto 0}.life-canvas{inset:12px;width:calc(100% - 24px);height:calc(100% - 24px)}}
 .art-pale .art-word i{color:var(--blue)}
-.hero-name .crosshair{right:-.28em;top:42%}
-@media(max-width:700px){.hero-name .crosshair{right:-.2em;top:30%}}
+.hero-name .crosshair{left:52%;right:auto;top:43%;font-size:.24em}
+@media(max-width:700px){.hero-name .crosshair{left:50%;top:43%;font-size:.22em}}
 .site-header{position:relative}.site-header nav{position:absolute;left:50%;transform:translateX(-50%)}
 .site-footer{position:relative}.site-footer .footer-links{position:absolute;left:50%;transform:translateX(-50%)}
 .card-art .life-canvas{inset:15% 5% 15% auto;width:34%;height:70%;z-index:0;pointer-events:none}
