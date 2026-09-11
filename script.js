@@ -7,6 +7,13 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
+document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.location.assign(link.getAttribute('href'));
+  });
+});
+
 function decodeRle(source) {
   const rows = [[]];
   let x = 0;
