@@ -7,10 +7,13 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
-document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+document.querySelectorAll('[data-email]').forEach((link) => {
+  const address = link.dataset.email;
+  const label = link.querySelector('[data-email-label]');
+  if (label) label.textContent = address;
   link.addEventListener('click', (event) => {
     event.preventDefault();
-    window.location.assign(link.getAttribute('href'));
+    window.location.assign(`mailto:${address}`);
   });
 });
 
