@@ -7,8 +7,8 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
-document.querySelectorAll('[data-email]').forEach((link) => {
-  const address = link.dataset.email;
+document.querySelectorAll('[data-email-user][data-email-domain]').forEach((link) => {
+  const address = `${link.dataset.emailUser}@${link.dataset.emailDomain}`;
   const label = link.querySelector('[data-email-label]');
   if (label) label.textContent = address;
   link.addEventListener('click', (event) => {
