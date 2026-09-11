@@ -52,7 +52,7 @@ const canvases = [...document.querySelectorAll('.life-canvas')];
 function normalize(pattern) {
   const width = Math.max(...pattern.map((row) => row.length));
   const empty = Array(width + 4).fill(0);
-  return [empty.slice(), empty.slice(), ...pattern.map((row) => [0, 0, ...row, ...Array(width - row.length).fill(0), 0, 0]), empty.slice(), empty.slice()];
+  return [empty.slice(), empty.slice(), ...pattern.map((row) => [0, 0, ...Array.from({ length: width }, (_, x) => row[x] || 0), 0, 0]), empty.slice(), empty.slice()];
 }
 
 function nextGeneration(board) {
